@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52843b8e-a77e-4e21-83a9-d3bd42aecaa8" name="Default Changelist" comment="" />
+    <list default="true" id="52843b8e-a77e-4e21-83a9-d3bd42aecaa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/products/CreateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/products/CreateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/products/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +33,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SC9eVb5qAm4G4QpuoqSV6XJYAX" />
   <component name="PropertiesComponent">
@@ -157,10 +167,25 @@
       <workItem from="1571293498654" duration="510000" />
       <workItem from="1571294279772" duration="41000" />
       <workItem from="1571294482841" duration="2350000" />
+      <workItem from="1571413465528" duration="60000" />
+      <workItem from="1571413577500" duration="5273000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

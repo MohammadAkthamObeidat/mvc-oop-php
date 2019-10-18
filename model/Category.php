@@ -35,6 +35,7 @@ class Category
         $this->created = $dateTime;
     }
 
+    // Add New Category.
     public function createCategory()
     {
         $this->setCreated();
@@ -50,6 +51,7 @@ class Category
 
     }
 
+    // Fetch All Categories From The Database.
     public function getAll()
     {
         $query = $this->connection->prepare("SELECT id, name, modified, created FROM categories");
@@ -59,7 +61,14 @@ class Category
         return $result;
     }
 
+    // Update Specific Category.
     public function updateCategory()
+    {
+
+    }
+
+    // Delete Specific Category.
+    public function deleteCategory()
     {
 
     }

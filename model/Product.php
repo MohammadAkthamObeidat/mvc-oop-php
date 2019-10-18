@@ -84,7 +84,7 @@ class Product
         $this->setCreate();
 
         $sql = "INSERT INTO products(name, price, description, created, category_id)
-                VALUES ($this->name, $this->price, $this->description, $this->created, $this->category_id)";
+                VALUES ('$this->name', '$this->price', '$this->description', '$this->created', '$this->category_id')";
 
         if ($this->connection->exec($sql)) {
             echo "New Record Added";
@@ -110,7 +110,10 @@ class Product
 
     public function deleteProduct()
     {
-
+        // sql to delete a record
+        $sql = "DELETE FROM products WHERE id=3";
+        $result = $this->connection->prepare($sql);
+        $result->execute();
     }
 
 }

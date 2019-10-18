@@ -5,7 +5,7 @@ class Database
 {
     private $servername = 'localhost';
     private $username = 'root';
-    private $password = "mao712199677";
+    private $password = "";
     private $dbname = "store";
 
     public function connect()

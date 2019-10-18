@@ -9,7 +9,8 @@ $conn = new Database();
 $connection = $conn->connect();
 
 // Instance From Category Class.
-$categories = new Category($connection);
+$category_obj = new Category($connection);
+$categories = $category_obj->getAll();
 
 $is_created_new_products = '';
 
@@ -61,8 +62,8 @@ if (isset($_POST['add-product'])) {
             <select name="category" id="">
                 <?php
                 foreach ($categories as $value) {
-                    $id = $value['id'];
-                    $name = $value['name'];
+                    $id = $value->id;
+                    $name = $value->name;
 
                     echo "<option value='$id' class='text-capitalize'>$name</option>";
                 }
