@@ -1,0 +1,16 @@
+.pr-table{
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.btu-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.add-button{
+    margin: auto 0;
+}
