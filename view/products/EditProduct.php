@@ -13,7 +13,7 @@ $category_obj = new Category($connection);
 $categories = $category_obj->getAll();
 
 $isUpdated = $product->updateProduct($_POST['update-product']);
-if($isUpdated){
+if ($isUpdated) {
     echo 'Product Updated.';
 }
 
