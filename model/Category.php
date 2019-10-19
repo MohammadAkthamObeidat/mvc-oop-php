@@ -62,14 +62,23 @@ class Category
     }
 
     // Update Specific Category.
-    public function updateCategory()
+    public function updateCategory($id)
     {
+        $query = "UPDATE products
+                    SET
+                        name = '$this->name'
+                    WHERE id = '$id'";
 
+        $result = $this->connection->exec($query);
+        return $result;
     }
 
-    // Delete Specific Category.
-    public function deleteCategory()
+    //Delete Specific Category From Database.
+    public function deleteCategory($id)
     {
-
+        // sql to delete a record
+        $query = "DELETE FROM products WHERE id = '$id'";
+        $result = $this->connection->exec($query);
+        return $result;
     }
 }

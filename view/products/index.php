@@ -13,11 +13,27 @@ $conn = $db->connect();
 // Instance Of Product Class.
 $product = new Product($conn);
 $products = $product->getAll();
+
+if(isset($_POST['delete-btn'])){
+    $isDeleted = $product->deleteProduct($_POST['delete-product']);
+    if($isDeleted){
+        $product->getAll();
+        echo'Product Deleted.';
+    }
+}
+
+if(isset($_POST['update-btn'])){
+
+    header("Location: EditProduct.php?id=".$_POST['update-btn']);
+
+}
 ?>
 <div class="btu-cont">
-    <a href="../products/CreateProduct.php"><button class="btn btn-success add-button"> Add New Product</button></a>
+    <a href="../products/CreateProduct.php">
+        <button class="btn btn-success add-button"> Add New Product</button>
+    </a>
 </div>
-<table  class="table table-hover pr-table">
+<table class="table table-hover pr-table">
     <thead>
     <tr>
         <th scope="col">Id</th>
@@ -34,14 +50,14 @@ $products = $product->getAll();
     <tbody>
     <?php
 
-    foreach ($products as $row) {
-        $id = $row->id;
-        $name = $row->name;
-        $description = $row->description;
-        $price = $row->price;
-        $created = $row->created;
-        $modified = $row->modified;
-        $category_id = $row->category;
+    foreach ($products as $item) {
+        $id = $item->id;
+        $name = $item->name;
+        $description = $item->description;
+        $price = $item->price;
+        $created = $item->created;
+        $modified = $item->modified;
+        $category_id = $item->category;
 
         echo "
                       <tr>
@@ -52,8 +68,20 @@ $products = $product->getAll();
                         <td>$created</td>
                         <td>$modified</td>
                         <td>$category_id</td>
-                        <td><button class='btn btn-success'>Edit</button></td>
-                        <td><button name='delete_product' class='btn btn-danger'>Delete</button></td>
+                        <td>
+                        <form action='' method='POST'> 
+                                <input type='hidden' value='$id' name='update-product'/>
+                                <a href='../products/EditProduct.php'>
+                                    <button class='btn btn-primary' name='update-btn'>Edit</button>
+                                </a>
+                        </form>
+                        </td>
+                        <td>
+                        <form action='' method='POST'>
+                            <input type='hidden' value='$id' name='delete-product'/>
+                            <button class='btn btn-danger' name='delete-btn'>Delete</button>
+                        </form>
+                        </td>
                         
                     </tr>
                     ";

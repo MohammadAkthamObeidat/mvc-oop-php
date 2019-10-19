@@ -103,17 +103,28 @@ class Product
         return $result;
     }
 
-    public function updateProduct()
+    //Update Specific Product.
+    public function updateProduct($id)
     {
+        $query = "UPDATE products
+                    SET
+                        name = '$this->name',
+                        description = '$this->description',
+                        price = '$this->price',
+                        category_id = '$this->category_id',
+                    WHERE id = '$id'";
 
+        $result = $this->connection->exec($query);
+        return $result;
     }
 
-    public function deleteProduct()
+    //Delete Specific Product From Database.
+    public function deleteProduct($id)
     {
         // sql to delete a record
-        $sql = "DELETE FROM products WHERE id=3";
-        $result = $this->connection->prepare($sql);
-        $result->execute();
+        $query = "DELETE FROM products WHERE id = '$id'";
+        $result = $this->connection->exec($query);
+        return $result;
     }
 
 }
